@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "ed9dfdab-8f97-402e-97ff-bfd6f616b6d7",
+		"name": "Moja posta API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Shipment - Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": 1,\n    \"origin\": true,\n    \"destination\": true,\n    \"delivered\": false,\n    \"weight\": 2,\n    \"office\": \"74eed321-5345-426e-ba85-519edd7ed214\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/shipment/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shipment",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shipment(s) - Read (all)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/shipment/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shipment",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shipment - Read (by ID)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"091b1d10-1f7b-4d5b-bb4b-6d58a68d4397\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/shipment/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shipment",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shipment - Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"id\":\"091b1d10-1f7b-4d5b-bb4b-6d58a68d4397\",\r\n   \"type\":{\r\n      \"id\":1,\r\n      \"name\":\"Paket\"\r\n   },\r\n   \"origin\":true,\r\n   \"destination\":false,\r\n   \"delivered\":false,\r\n   \"weight\":{\r\n      \"id\":0,\r\n      \"desc\":\"Manje od 1 kg\"\r\n   },\r\n   \"office\":{\r\n      \"id\":\"09df5e62-7e9d-4b4c-85d0-086dd06db799\",\r\n      \"PLZ\":11073,\r\n      \"name\":\"Novi Beograd\"\r\n   }\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/shipment/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shipment",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Shipment - Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"091b1d10-1f7b-4d5b-bb4b-6d58a68d4397\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/shipment/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"shipment",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post office - Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"PLZ\": 11108,\n    \"name\": \"Palilula\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/office/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"office",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post office(s) - Read (all)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/office/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"office",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post office - Read (by ID)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"74eed321-5345-426e-ba85-519edd7ed214\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/office/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"office",
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post office - Update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"id\":\"74eed321-5345-426e-ba85-519edd7ed214\",\r\n   \"PLZ\":11111,\r\n   \"name\":\"Vracar\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/office/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"office",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post office - Delete",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"74eed321-5345-426e-ba85-519edd7ed214\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/office/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"office",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
