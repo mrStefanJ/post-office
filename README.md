@@ -17,7 +17,7 @@ npm start
 When enter in Postman, create your workspaces and go to File -> Import and 
 upload file db.json from folder db
 
-Choose GET Shipment and click send, the same for GET Post 
+Choose GET Shipment and click button SEND, the same for GET Post 
 
 ### Fourth
 Run another Node.js
@@ -26,3 +26,9 @@ cd ...\post-office\front-end
 npm i
 npm start
 ```
+
+## Technology
+
+- React
+- React-Bootstrap
+- Mobx
