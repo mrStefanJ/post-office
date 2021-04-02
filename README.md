@@ -36,3 +36,6 @@ cd ...\post-office\front-end
 npm i
 npm start
 ```
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
